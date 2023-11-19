@@ -1,2 +1,2 @@
-# meta-prompting
-Meta Prompting for Foundation Models
+# Meta Prompting
+Meta Prompting for AGI Systems
