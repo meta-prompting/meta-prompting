@@ -72,7 +72,7 @@ This version of Meta Prompting is designed to tackle problems that are too compl
 
 
 ## Citations
-Please cite the paper and star this repo if you use Cumulative Reasoning (CR) and find it interesting/useful, thanks! Feel free to contact zhangyif21@tsinghua.edu.cn | yangjq21@mails.tsinghua.edu.cn or open an issue if you have any questions.
+Please cite the paper and star this repo if you use Meta Prompting (MP) and Cumulative Reasoning (CR) and find it interesting/useful, thanks! Feel free to contact zhangyif21@tsinghua.edu.cn | yangjq21@mails.tsinghua.edu.cn or open an issue if you have any questions.
 
 ```bibtex
 @article{zhang2023cumulative,
