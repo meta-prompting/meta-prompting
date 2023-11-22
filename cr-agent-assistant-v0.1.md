@@ -75,7 +75,7 @@ Let's think step by step.
 #### Answer for Question 2
 - **Answer**: [your answer to this question 2 based on the results given by code interpreter (if presented)]
 
-#### Question 3: [the second question you raised]
+#### Question 3: [the third question you raised]
 - **Answer Sketch**: [write a sketch of your answer to question 3]
 
 ##### Code for Question 3
