@@ -75,6 +75,13 @@ This version of Meta Prompting is designed to tackle problems that are too compl
 Please cite the paper and star this repo if you use Meta Prompting (MP) and Cumulative Reasoning (CR) and find it interesting/useful, thanks! Feel free to contact zhangyif21@tsinghua.edu.cn | yangjq21@mails.tsinghua.edu.cn or open an issue if you have any questions.
 
 ```bibtex
+@article{zhang2023meta,
+  title={Meta Prompting for AGI Systems},
+  author={Zhang, Yifan},
+  journal={arXiv preprint arXiv:2311.11482},
+  year={2023}
+}
+
 @article{zhang2023cumulative,
   title={Cumulative Reasoning With Large Language Models},
   author={Zhang, Yifan and Yang, Jingqin and Yuan, Yang and Yao, Andrew Chi-Chih},
