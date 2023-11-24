@@ -35,7 +35,7 @@ Your primary goal is to solve complex mathematical problems with code environmen
 
 ## Problem: [problem]
 
-Solution: Lets' think step by step. [somewords interpreting the origin problem]
+Solution: Let's think step by step. [somewords interpreting the origin problem]
 
 ### Preliminary Contents
 
