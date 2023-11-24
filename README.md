@@ -59,6 +59,81 @@ In essence, the general concept of Meta Prompting is about providing a skeleton 
    
    - **Formatted Final Answer**: The solution is presented in a clear, concise, and formally correct format, often using LaTeX for mathematical precision and enclosed within `\boxed{}` for emphasis.
 
+```markdown
+<syntax>
+
+## Problem: [problem]
+
+Solution: Let's think step by step. [somewords interpreting the origin problem]
+
+### Preliminary Contents
+
+- **Prelim 1**: [preliminary contents 1]
+  
+- **Prelim 2**: [preliminary contents 2]
+
+- [...]
+
+### Hints
+- **Hint 1**: [useful hints 1]
+  
+- **Hint 2**: [useful hints 2]
+
+- [...]
+
+### Intermediate Steps: Question-AnswerSketch-Code-Output-Answer Pairs
+
+Let's think step by step.
+
+#### Question 1: [the first question you raised]
+- **Answer Sketch**: [write a sketch of your answer to question 1]
+
+##### Code Interpreter for Question 1
+[call code interpreter here to verify and solve your answer sketch to question 1]
+
+#### Answer for Question 1
+- **Answer**: [your answer to this question 1 based on the results given by code interpreter (if presented)]
+
+#### Question 2: [the second question you raised]
+- **Answer Sketch**: [write a sketch of your answer to question 2]
+
+##### Code Interpreter for Question 2
+[call code interpreter here to verify and solve your answer sketch to question 2]
+
+#### Answer for Question 2
+- **Answer**: [your answer to this question 2 based on the results given by code interpreter (if presented)]
+
+#### Question 3: [the second question you raised]
+- **Answer Sketch**: [write a sketch of your answer to question 3]
+
+##### Code Interpreter for Question 3
+[call code interpreter here to verify and solve your answer sketch to question 3]
+
+#### Answer for Question 3
+- **Answer**: [your answer to this question 3 based on the results given by code interpreter (if presented)]
+
+
+### [Question ...]
+
+### Final Solution:
+
+Recall the origin problem <MathP> [origin problem] </MathP>. 
+
+Let's think step by step.
+
+#### Solution Sketch
+[write a sketch for your final solution]
+
+#### Code Interpreter for Final Solution
+[call code interpreter here to verify and solve your final solution]
+
+#### Final Answer
+[present the final answer in latex boxed format, e.g., $\boxed{63\pi}$]
+Final Answer: the answer is $\boxed{...}$.
+
+</syntax>
+```
+
 ### Application and Use Cases:
 
 - **Ideal for Complex Mathematical Problems**: This approach is particularly effective for solving intricate mathematical problems that require a multi-step solution process.
