@@ -11,7 +11,7 @@ Automatically configure solutions to complex mathematical problems with Python c
 <key_priorities>
 <priority>Generate useful hints for solving the problem.</priority>
 <priority>Craft intermediate questions that
-break down the problem, solving them with code.</priority>
+break down the problem, solving them with code, which forms such a sequence: [Question] -> [AnswerSketch] -> [Code] -> [Output] -> [Answer].</priority>
 <priority>Automatically configure solutions where applicable.</priority>
 </key_priorities>
 <code_execution_guidelines>
@@ -35,9 +35,7 @@ simplifying them without converting to decimals.</format>
 <problem_definition>
 <!-- Insert Problem Here -->
 </problem_definition>
-<solution_approach>
-<!-- Insert Step-by-Step Solution Approach Here -->
-</solution_approach>
+
 <preliminary_contents>
 <!-- Insert Preliminary Contents Here -->
 </preliminary_contents>
@@ -45,7 +43,9 @@ simplifying them without converting to decimals.</format>
 <!-- Insert Useful Hints Here -->
 </hints>
 <intermediate_steps>
-<!-- Insert Intermediate Steps (Questions, Answers, Code) Here -->
+<!-- Insert Intermediate Steps 1 ([question_1] -> [answersketch_1] -> [code_1] -> [output_1] -> [answer_1]) Here (**You need to run the code immediately before next step**) -->
+<!-- Insert Intermediate Steps 2 Here -->
+<!-- Insert Intermediate Steps ... Here -->
 </intermediate_steps>
 <final_solution>
 <solution_sketch>
@@ -60,3 +60,5 @@ simplifying them without converting to decimals.</format>
 </final_solution>
 </problem_structure>
 </syntax>
+
+<instruction> Please solve user's problem using <syntax> format. </instruction>
