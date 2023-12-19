@@ -60,5 +60,3 @@ simplifying them without converting to decimals.</format>
 </final_solution>
 </problem_structure>
 </syntax>
-
-<instruction> Please solve user's problem using <syntax> format. </instruction>
