@@ -219,7 +219,57 @@ simplifying them without converting to decimals.</format>
 
 This version of Meta Prompting is designed to tackle problems that are too complex to be solved in a straightforward manner. It encourages a meticulous and methodical approach, ensuring that each aspect of the problem is thoroughly understood and addressed. The use of intermediate questions and detailed answer sketches, combined with code execution, makes it an effective strategy for deep and complex reasoning.
 
+## Meta Prompting for Prompting Tasks
 
+### Prompt Revision to Enhance Reasoning Capabilities
+
+```tex
+\begin{tcolorbox}[width=0.95\textwidth,colback=gray!2!white,colframe=gray!50!blue]
+    \begin{minipage}{\textwidth}
+        \textbf{Task:} \textit{Prompt Revision to Enhance Reasoning Capabilities.}
+        \begin{enumerate}
+            \item \textbf{Input Prompt:} [input prompt]
+            \item \textbf{Objective:} Revise the above input prompt to enhance critical thinking and reasoning capabilities.
+            \item \textbf{Key Elements for Revision:}
+                \begin{itemize}
+                    \item Integrate complex problem-solving elements.
+                    \item Embed multi-step reasoning processes.
+                    \item Incorporate scenarios challenging conventional thinking.
+                \end{itemize}
+            \item \textbf{Expected Outcome:}
+                \begin{itemize}
+                    \item The revised prompt ([revised prompt]) should stimulate deeper analytical thought.
+                    \item It should facilitate a comprehensive understanding of the subject matter.
+                    \item Ensure the revised prompt fosters the exploration of diverse perspectives.
+                    \item The prompt should encourage synthesis of information from various domains.
+                \end{itemize}
+        \end{enumerate}
+\end{minipage}
+\end{tcolorbox}
+```
+
+### Prompt Simplification
+
+```tex
+\begin{tcolorbox}[width=0.95\textwidth,colback=gray!2!white,colframe=gray!50!blue]
+    \begin{minipage}{\textwidth}
+        \textbf{Task:} \textit{Prompt Simplification}
+        \begin{itemize}
+            \item \textbf{Original Prompt:} [input prompt]
+            \item \textbf{Goal:} Transform the original prompt into a more concise version while preserving its core essence and objective.
+            \item \textbf{Instructions for Transformation:}
+                \begin{enumerate}
+                    \item Maintain the primary purpose and objectives of the original prompt.
+                    \item Focus on distilling the prompt to include only key instructions and essential information.
+                    \item Eliminate any extraneous or non-essential details.
+                    \item Use clear, direct language to ensure ease of understanding.
+                    \item Where beneficial, employ bullet points or numbered steps to structure the prompt and enhance clarity.
+                \end{enumerate}
+            \item \textbf{Outcome:} The [revised prompt] should be succinct yet sufficiently detailed to guide effective task completion. It should be structured for ease of comprehension and application, ensuring a focused and streamlined approach to the task at hand.
+        \end{itemize}
+    \end{minipage}
+\end{tcolorbox}
+```
 
 ## Citations
 Please cite the paper and star this repo if you use Meta Prompting (MP) and Cumulative Reasoning (CR) and find it interesting/useful, thanks! Feel free to contact zhangyif21@tsinghua.edu.cn or open an issue if you have any questions.
