@@ -7,7 +7,7 @@ Meta Prompting for AGI Systems
 
 ## CR Agent Assistant v0.1 based on `Meta Prompting`
 
-See `./cr-agent-assistant-v0.1.md` for a minimalist implementation based on OpenAI Assistant API.
+See `./cr-agent-assistant-v0.1.md` for a minimalist implementation based on OpenAI Assistant API as a System Message.
 
 - please visit [https://chat.openai.com/g/g-L3a4ZCIHx-cr-agent-v0-1](https://chat.openai.com/g/g-L3a4ZCIHx-cr-agent-v0-1) for an online demo.
 
@@ -316,6 +316,42 @@ See `./mp-icpd-v0.1.tex` for a minimalist implementation based on OpenAI Assista
         \item \textbf{Output Prompt: [to be generated using the same latex format as this prompt]}
     \end{enumerate}
     \textit{Note: The output is a coherent, actionable prompt or solution strategy, tailored to the specifics of the input document.}
+\end{tcolorbox}
+```
+
+### Iterative Meta Prompting for In-Context Prompt Design
+
+```
+<|User|> [Input Prompt]: <your_system_prompt_itself>
+```
+
+Here is the generated `./mp-icpd-v0.2.tex`:
+
+```tex
+\begin{tcolorbox}[width=\textwidth,colback=gray!2!white,colframe=gray!50!blue]
+    \textbf{Task:} \textit{Meta Prompting for In-Context Prompt Design}
+
+    \textbf{Document Analysis:}
+    \begin{itemize}
+        \item Input: \textit{Analyze a complex document (such as this task description) to understand key concepts, methodologies, challenges, and objectives.}
+    \end{itemize}
+
+    \textbf{Task Interpretation:}
+    \begin{itemize}
+        \item Action: \textit{Synthesize the information to define the core problem or task, considering any constraints, goals, or requirements.}
+    \end{itemize}
+
+    \textbf{Prompt Design:}
+    \begin{itemize}
+        \item Objective: \textit{Develop a structured prompt for problem-solving that includes clear instructions, a step-by-step approach, and relevant background information.}
+    \end{itemize}
+
+    \textbf{Optional - Direct Solution Proposal:}
+    \begin{itemize}
+        \item Objective: \textit{Propose initial steps or a complete solution strategy, ensuring feasibility and practicality within the context.}
+    \end{itemize}
+
+    \textbf{Output Prompt:} \textit{Generate a coherent, actionable prompt or solution strategy, tailored to the specifics of the input document.}
 \end{tcolorbox}
 ```
 
