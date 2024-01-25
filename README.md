@@ -221,7 +221,12 @@ This version of Meta Prompting is designed to tackle problems that are too compl
 
 ## Meta Prompting for Prompting Tasks
 
+
 ### Prompt Revision to Enhance Reasoning Capabilities
+
+- please visit [https://chat.openai.com/g/g-o54JV8zr7-mp-pt](https://chat.openai.com/g/g-o54JV8zr7-mp-pt) for an online demo.
+
+See `./mp-pt-reasoning-v0.1.tex` for a minimalist latex-style implementation based on OpenAI Assistant API.
 
 ```tex
 \begin{tcolorbox}[width=0.95\textwidth,colback=gray!2!white,colframe=gray!50!blue]
