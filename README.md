@@ -221,6 +221,7 @@ This version of Meta Prompting is designed to tackle problems that are too compl
 
 ## Meta Prompting for Prompting Tasks
 
+In the realm of advanced machine learning and AI systems, the task of automatically generating structured prompts, termed **Meta Prompting for Prompting Tasks (MP-PT)** or simply **Meta Prompting** in this specialized case (Reynolds & McDonell, 2021; Hou et al., 2022), emerges as a critical component. This process entails utilizing language models to interpret input strings as instructions and consequently generate prompts that guide further tasks. We formalize this concept within the framework of General Meta Prompting with special tasks called prompting tasks, detailing its categorical and functorial properties.
 
 ### Prompt Revision to Enhance Reasoning Capabilities
 
@@ -275,6 +276,15 @@ See `./mp-pt-reasoning-v0.1.tex` for a minimalist latex-style implementation bas
     \end{minipage}
 \end{tcolorbox}
 ```
+
+## References
+
+1. Laria Reynolds and Kyle McDonell. Prompt programming for large language models: Beyond the
+few-shot paradigm. In Extended Abstracts of the 2021 CHI Conference on Human Factors in
+Computing Systems, pp. 1–7, 2021.
+
+2. Yutai Hou, Hongyuan Dong, Xinghao Wang, Bohan Li, and Wanxiang Che. Metaprompting: Learning
+to learn better prompts. arXiv preprint arXiv:2209.11486, 2022.
 
 ## Citations
 Please cite the paper and star this repo if you use Meta Prompting (MP) and Cumulative Reasoning (CR) and find it interesting/useful, thanks! Feel free to contact zhangyif21@tsinghua.edu.cn or open an issue if you have any questions.
