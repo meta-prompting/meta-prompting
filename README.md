@@ -277,7 +277,7 @@ See `./mp-pt-reasoning-v0.1.tex` for a minimalist latex-style implementation bas
 \end{tcolorbox}
 ```
 
-## Iterative and Self-referential Meta Prompting
+## Recursive Meta Prompting
 
 ### Meta Prompting for In-Context Prompt Design
 
