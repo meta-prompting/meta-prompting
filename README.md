@@ -322,7 +322,7 @@ See `./mp-icpd-v0.1.tex` for a minimalist implementation based on OpenAI Assista
 ### Recursive Meta Prompting for In-Context Prompt Design
 
 ```
-<|User|> [Input Prompt]: <your_system_prompt_itself>
+<|User|> [Input Document]: <your_system_prompt_itself> \textbf{Output Prompt: [to be generated using the same latex format as this prompt]}
 ```
 
 Here is the generated `./mp-icpd-v0.2.tex`:
