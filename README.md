@@ -319,7 +319,7 @@ See `./mp-icpd-v0.1.tex` for a minimalist implementation based on OpenAI Assista
 \end{tcolorbox}
 ```
 
-### Iterative Meta Prompting for In-Context Prompt Design
+### Recursive Meta Prompting for In-Context Prompt Design
 
 ```
 <|User|> [Input Prompt]: <your_system_prompt_itself>
