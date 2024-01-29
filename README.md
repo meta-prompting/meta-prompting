@@ -2,6 +2,14 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2311.11482-<COLOR>.svg)](https://arxiv.org/abs/2311.11482) 
 
+### Game of 24
+
+<center>
+
+**CR-Agent-XML v0.2** Solved Rate: **90.46%!** Time usage: **0.01s per sample!**
+
+</center>
+
 ## Introduction
 
 Official implementation of paper "Meta Prompting for AGI Systems" (https://arxiv.org/abs/2311.11482).
