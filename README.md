@@ -6,7 +6,9 @@
 
 <center>
 
-**CR-Agent-XML v0.2** Solved Rate: **90.46%!** Time usage: **0.01s per sample!**
+**CR-Agent-XML v0.2** Solved Rate: **90.46%!** Time usage: **0.04s per sample!**
+
+Experiment log: (https://chat.openai.com/share/a95f7c8b-ccd6-46f9-9259-98a3a691a193)
 
 </center>
 
