@@ -10,7 +10,7 @@
 
 Experiment log: (https://chat.openai.com/share/a95f7c8b-ccd6-46f9-9259-98a3a691a193)
 
-![](./images/plot.png)
+![](./images/plot3.png)
 
 </center>
 
