@@ -1,4 +1,4 @@
-# 24 Game Solution: 3, 3, 7, 7
+# 24 Game Solution
 
 ## [User]:
 
