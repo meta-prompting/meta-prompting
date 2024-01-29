@@ -62,7 +62,8 @@ To present this in a more formal mathematical notation:
 \]
 
 This is the valid combination of operations and numbers that solves the Game of 24 for the given set of numbers.
-User
+
+## [User]:
 I have a file contains more than 1k Game of 24 puzzles, can you batch process them? I want the result for the first 100 samples
 
 ```file sample
