@@ -386,7 +386,7 @@ Please cite the paper and star this repo if you use Meta Prompting (MP) and Cumu
 ```bibtex
 @article{zhang2023meta,
   title={Meta Prompting for AGI Systems},
-  author={Zhang, Yifan},
+  author={Zhang, Yifan and Yuan, Yang and Yao, Andrew Chi-Chih},
   journal={arXiv preprint arXiv:2311.11482},
   year={2023}
 }
