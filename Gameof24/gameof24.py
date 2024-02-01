@@ -2,51 +2,77 @@
 # Author: CR Agent XML v0.2
 
 import pandas as pd
+import time
 from itertools import permutations, product
+import operator
+from fractions import Fraction
 
-# Function to parse puzzle string into a list of integers
-def parse_puzzle(puzzle_str):
-    return [int(num) for num in puzzle_str.split()]
+# Basic operations
+ops = {
+    '+': operator.add,
+    '-': operator.sub,
+    '*': operator.mul,
+    '/': operator.truediv,
+}
 
-# Operations: addition, subtraction, multiplication, division
-operations = [lambda x, y: x + y, lambda x, y: x - y, lambda x, y: x * y, lambda x, y: x / y]
-operation_symbols = ['+', '-', '*', '/']
-
-# Function to apply operations to a set of numbers for a specific puzzle
-def apply_operations_puzzle(numbers, operations):
+# Function to try all operations between two numbers
+def try_ops(a, b):
     results = []
-    for ops in product(operations, repeat=len(numbers)-1):
-        for permutation in set(permutations(numbers)):
-            # Building the expression with parentheses around each operation
-            expression = f"({permutation[0]}{operation_symbols[operations.index(ops[0])]}{permutation[1]})"
-            for i in range(1, len(numbers)-1):
-                expression = f"({expression}{operation_symbols[operations.index(ops[i])]}{permutation[i+1]})"
-            try:
-                # Evaluating the expression
-                if eval(expression) == 24:
-                    results.append(expression)
-            except ZeroDivisionError:
-                continue
+    for op in ops:
+        if op == '/' and b == 0:  # Avoid division by zero
+            continue
+        try:
+            result = ops[op](a, b)
+            results.append((result, f'({a}{op}{b})'))
+        except Exception:
+            pass
     return results
 
-# Load the file
-file_path = './24.csv'  # Replace with your file path
-puzzle_df = pd.read_csv(file_path)
+# Generate all possible results for a list of numbers
+def generate_results(numbers):
+    if len(numbers) == 1:
+        return [(numbers[0], str(numbers[0]))]
+    results = []
+    for i in range(len(numbers)):
+        for j in range(len(numbers)):
+            if i != j:
+                remaining = [numbers[k] for k in range(len(numbers)) if k != i and k != j]
+                for result1, expr1 in generate_results([numbers[i]]):
+                    for result2, expr2 in generate_results([numbers[j]]):
+                        for result, expr in try_ops(result1, result2):
+                            if remaining:
+                                for final_result, final_expr in generate_results(remaining + [result]):
+                                    results.append((final_result, final_expr.replace(str(result), expr, 1)))
+                            else:
+                                results.append((result, expr))
+    return results
 
-# Process and solve all puzzles
-solutions = {}
-for puzzle_str in puzzle_df['Puzzles']:
-    puzzle_numbers = parse_puzzle(puzzle_str)
-    solution = apply_operations_puzzle(puzzle_numbers, operations)
-    solutions[puzzle_str] = solution
+# Function to parse puzzle string into numbers
+def parse_puzzle(puzzle_str):
+    return [int(n) for n in puzzle_str.split()]
 
-# Calculate the solved rate
-solved_count = sum([1 for solution in solutions.values() if solution])
-solved_rate = solved_count / len(solutions) * 100
+def process_puzzles(file_path):
+    puzzles_df = pd.read_csv(file_path)
+    puzzle_samples = puzzles_df['Puzzles'].tolist()
+    solutions_dict = {}
+    for puzzle_str in puzzle_samples:
+        numbers = parse_puzzle(puzzle_str)
+        results = generate_results(numbers)
+        solutions = set()
+        for result, expr in results:
+            if abs(result - 24) < 1e-6:
+                solutions.add(expr)
+        if solutions:
+            solutions_dict[puzzle_str] = solutions
+        else:
+            solutions_dict[puzzle_str] = "No solution found"
+    return solutions_dict
 
-print(f"Solved Rate: {solved_rate:.2f}%")
+# Example usage
+file_path = './24.csv'  # Update this to your file path
+solutions_dict = process_puzzles(file_path)
 
-# If you want to save the solutions to a file
-with open('solutions.txt', 'w') as file:
-    for puzzle, solution in solutions.items():
-        file.write(f"Puzzle: {puzzle}, Solutions: {solution}\n")
+# Save the solutions to an output file
+output_file_path = './solutions.csv'  # Update this to your desired output path
+pd.DataFrame(list(solutions_dict.items()), columns=['Puzzle', 'Solution']).to_csv(output_file_path, index=False)
+print("Solved rate: ", sum([1 for solution in solutions_dict.values() if solution != "No solution found"]) / len(solutions_dict) * 100, "%")
