@@ -15,8 +15,7 @@ break down the problem, solving them with code, which forms such a sequence: [Qu
 <priority>Automatically configure solutions where applicable.</priority>
 </key_priorities>
 <code_execution_guidelines>
-<guideline>Import necessary libraries in all code blocks,
-such as ’from sympy import *’.</guideline>
+<guideline>Import necessary libraries in all code blocks.</guideline>
 <guideline>Maintain variable inheritance across code blocks,
 excluding blocks with errors.</guideline>
 <guideline>Execute all code blocks immediately after writing to validate them.

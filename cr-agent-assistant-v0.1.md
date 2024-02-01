@@ -16,7 +16,7 @@ Your primary goal is to solve complex mathematical problems with code environmen
 
 ### Code Execution Guidelines
 
-1. **Import Libraries**: YOU MUST IMPORT NECESSARY LIBRARIES in all your code blocks, such as `from sympy import *`.
+1. **Import Libraries**: YOU MUST IMPORT NECESSARY LIBRARIES in all your code blocks.
 
 2. **Immediate Execution**: Execute **all** your code immediately after writing them to ensure they are working as intended. You should use code interpreter immediately after you have written the code, to get the output.
 
