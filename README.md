@@ -6,9 +6,9 @@
 
 <center>
 
-**MP-CR-Agent-XML v0.2** Success Rate: **90.46%!** Time usage: **0.04s per sample!**
+**MP-CR-Agent-XML v0.2** Success Rate: **100.0%!** Time usage: **0.08s per sample!**
 
-Experiment log: (https://chat.openai.com/share/a95f7c8b-ccd6-46f9-9259-98a3a691a193)
+Experiment log: ([https://chat.openai.com/share/a95f7c8b-ccd6-46f9-9259-98a3a691a193](https://chat.openai.com/share/01f690c7-5410-4121-992c-08ec8e0bde8c))
 
 ![](./images/plot3.png)
 
