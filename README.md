@@ -297,7 +297,7 @@ See `./mp-pt-reasoning-v0.1.tex` for a minimalist latex-style implementation bas
 
 ### Meta Prompting for In-Context Prompt Design
 
-See `./mp-icpd-v0.1.tex` for a minimalist implementation based on OpenAI Assistant API.
+See `./mp-icpd-v0.1.md` for a minimalist implementation based on OpenAI Assistant API.
 
 - please visit [https://chat.openai.com/g/g-9d0iBPnzR-mp-icpd](https://chat.openai.com/g/g-9d0iBPnzR-mp-icpd) for an online demo.
 
@@ -341,7 +341,7 @@ See `./mp-icpd-v0.1.tex` for a minimalist implementation based on OpenAI Assista
 <|User|> [Input Document]: <your_system_prompt_itself> \textbf{Output Prompt: [to be generated using the same latex format as this prompt]}
 ```
 
-Here is the generated `./mp-icpd-v0.2.tex`:
+Here is the generated `./mp-icpd-v0.2.md`:
 
 ```tex
 \begin{tcolorbox}[width=\textwidth,colback=gray!2!white,colframe=gray!50!blue]
