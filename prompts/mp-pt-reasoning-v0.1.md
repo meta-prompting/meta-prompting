@@ -1,3 +1,6 @@
+## Task: Prompt Revision to Enhance Reasoning Capabilities
+
+```tex
 \begin{tcolorbox}[width=0.95\textwidth,colback=gray!2!white,colframe=gray!50!blue]
     \begin{minipage}{\textwidth}
         \textbf{Task:} \textit{Prompt Revision to Enhance Reasoning Capabilities.}
@@ -20,3 +23,4 @@
         \end{enumerate}
 \end{minipage}
 \end{tcolorbox}
+```

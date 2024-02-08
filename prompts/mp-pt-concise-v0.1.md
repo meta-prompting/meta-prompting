@@ -1,3 +1,6 @@
+## Task: Prompt Simplification
+
+```tex
 \begin{tcolorbox}[width=0.95\textwidth,colback=gray!2!white,colframe=gray!50!blue]
     \begin{minipage}{\textwidth}
         \textbf{Task:} \textit{Prompt Simplification}
@@ -16,3 +19,4 @@
         \end{itemize}
     \end{minipage}
 \end{tcolorbox}
+```

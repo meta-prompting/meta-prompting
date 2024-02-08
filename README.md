@@ -44,15 +44,15 @@ In essence, the general concept of Meta Prompting is about providing a skeleton 
 
 ### CR Agent Assistant v0.1 based on `Meta Prompting`
 
-See `./cr-agent-assistant-v0.1.md` for a minimalist implementation based on OpenAI Assistant API as a System Message.
+See `./prompts/cr-agent-assistant-v0.1.md` for a minimalist implementation based on OpenAI Assistant API as a System Message.
 
 - please visit [https://chat.openai.com/g/g-L3a4ZCIHx-cr-agent-v0-1](https://chat.openai.com/g/g-L3a4ZCIHx-cr-agent-v0-1) for an online demo.
 
-See `./cr-agent-xml-assistant-v0.1.xml` for a minimalist XML-style implementation based on OpenAI Assistant API.
+See `./prompts/cr-agent-xml-assistant-v0.1.xml` for a minimalist XML-style implementation based on OpenAI Assistant API.
 
 - please visit [https://chat.openai.com/g/g-4ir4la2Z6-cr-agent-xml-v0-1](https://chat.openai.com/g/g-4ir4la2Z6-cr-agent-xml-v0-1) for an online demo.
 
-See `./cr-agent-xml-assistant-v0.2.xml` for a minimalist XML-style implementation based on OpenAI Assistant API.
+See `./prompts/cr-agent-xml-assistant-v0.2.xml` for a minimalist XML-style implementation based on OpenAI Assistant API.
 
 - please visit [https://chat.openai.com/g/g-cJV031wLP-cr-agent-xml-v0-2](https://chat.openai.com/g/g-cJV031wLP-cr-agent-xml-v0-2) for an online demo.
 
@@ -243,7 +243,7 @@ In the realm of advanced machine learning and AI systems, the task of automatica
 
 - please visit [https://chat.openai.com/g/g-o54JV8zr7-mp-pt](https://chat.openai.com/g/g-o54JV8zr7-mp-pt) for an online demo.
 
-See `./mp-pt-reasoning-v0.1.tex` for a minimalist latex-style implementation based on OpenAI Assistant API.
+See `./prompts/mp-pt-reasoning-v0.1.tex` for a minimalist latex-style implementation based on OpenAI Assistant API.
 
 ```tex
 \begin{tcolorbox}[width=0.95\textwidth,colback=gray!2!white,colframe=gray!50!blue]
@@ -297,7 +297,7 @@ See `./mp-pt-reasoning-v0.1.tex` for a minimalist latex-style implementation bas
 
 ### Meta Prompting for In-Context Prompt Design
 
-See `./mp-icpd-v0.1.md` for a minimalist implementation based on OpenAI Assistant API.
+See `./prompts/mp-icpd-v0.1.md` for a minimalist implementation based on OpenAI Assistant API.
 
 - please visit [https://chat.openai.com/g/g-9d0iBPnzR-mp-icpd](https://chat.openai.com/g/g-9d0iBPnzR-mp-icpd) for an online demo.
 
@@ -341,7 +341,7 @@ See `./mp-icpd-v0.1.md` for a minimalist implementation based on OpenAI Assistan
 <|User|> [Input Document]: <your_system_prompt_itself> \textbf{Output Prompt: [to be generated using the same latex format as this prompt]}
 ```
 
-Here is the generated `./mp-icpd-v0.2.md`:
+Here is the generated `./prompts/mp-icpd-v0.2.md`:
 
 ```tex
 \begin{tcolorbox}[width=\textwidth,colback=gray!2!white,colframe=gray!50!blue]
