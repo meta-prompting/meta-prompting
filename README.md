@@ -16,7 +16,7 @@ Experiment log: ([https://chat.openai.com/share/01f690c7-5410-4121-992c-08ec8e0b
 
 ## Introduction
 
-Official implementation of paper "Meta Prompting for AGI Systems" (https://arxiv.org/abs/2311.11482).
+Official implementation of paper "Meta Prompting for AI Systems" (https://arxiv.org/abs/2311.11482).
 
 **Meta Prompting (General Definition)**: Meta Prompting is a prompting technique inspired by type theory, emphasizing the structure and syntax of examples rather than their detailed content. It's an approach where the focus is on presenting the outline or framework of a problem or topic, offering a scaffold that can be filled with specific details as needed. This technique is particularly useful in situations where understanding the form and pattern of a problem or solution is more crucial than the specific content.
 
