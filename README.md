@@ -2,18 +2,6 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2311.11482-<COLOR>.svg)](https://arxiv.org/abs/2311.11482) 
 
-### Game of 24
-
-<center>
-
-**MP-CR-Agent-XML v0.2** Success Rate: **100%!** Time usage: **0.08s per sample!**
-
-Experiment log: ([https://chat.openai.com/share/01f690c7-5410-4121-992c-08ec8e0bde8c](https://chat.openai.com/share/01f690c7-5410-4121-992c-08ec8e0bde8c))
-
-![](./images/plot3.png)
-
-</center>
-
 ## Introduction
 
 Official implementation of paper "Meta Prompting for AI Systems" (https://arxiv.org/abs/2311.11482).
@@ -31,6 +19,18 @@ Official implementation of paper "Meta Prompting for AI Systems" (https://arxiv.
 4. **Adaptability**: The approach is adaptable to various domains, from mathematical problem-solving to creative writing, where the structure of the response is a key element.
 
 5. **Guidance for Detailed Exploration**: While it does not delve into specifics, Meta Prompting provides a clear pathway for detailed exploration, guiding users on how to approach and structure their deep dive into the topic.
+
+### Game of 24
+
+<center>
+
+**MP-CR-Agent-XML v0.2** Success Rate: **100%!** Time usage: **0.08s per sample!**
+
+Experiment log: ([https://chat.openai.com/share/01f690c7-5410-4121-992c-08ec8e0bde8c](https://chat.openai.com/share/01f690c7-5410-4121-992c-08ec8e0bde8c))
+
+![](./images/plot3.png)
+
+</center>
 
 ### Application:
 
