@@ -1,7 +1,7 @@
 # Meta Prompting for AI Systems 
 
 [![arXiv](https://img.shields.io/badge/arXiv-2311.11482-<COLOR>.svg)](https://arxiv.org/abs/2311.11482) 
-![Python 3.10](https://img.shields.io/badge/python-3.10-green.svg)
+![Python 3.10](https://img.shields.io/badge/python-3.11-green.svg)
 
 ## Introduction
 
