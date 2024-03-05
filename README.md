@@ -387,10 +387,12 @@ to learn better prompts. arXiv preprint arXiv:2209.11486, 2022.
 Please cite the paper and star this repo if you use Meta Prompting (MP) and find it interesting/useful, thanks! Feel free to contact zhangyif21@tsinghua.edu.cn or open an issue if you have any questions.
 
 ```bibtex
-@article{zhang2023meta,
+@inproceedings{
+  zhang2024meta,
   title={Meta Prompting for AI Systems},
-  author={Zhang, Yifan and Yuan, Yang and Yao, Andrew Chi-Chih},
-  journal={arXiv preprint arXiv:2311.11482},
-  year={2023}
+  author={Yifan Zhang and Yang Yuan and Andrew C Yao},
+  booktitle={ICLR 2024 Workshop on Bridging the Gap Between Practice and Theory in Deep Learning},
+  year={2024},
+  url={https://openreview.net/forum?id=vXRKHNYg1F}
 }
 ```
