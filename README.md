@@ -217,7 +217,7 @@ Please cite the paper and star this repo if you use Meta Prompting (MP) and find
 @inproceedings{
   zhang2024meta,
   title={Meta Prompting for AI Systems},
-  author={Yifan Zhang and Yang Yuan and Andrew C Yao},
+  author={Zhang, Yifan and Yuan, Yang and Yao, Andrew Chi-Chih},
   booktitle={ICLR 2024 Workshop on Bridging the Gap Between Practice and Theory in Deep Learning},
   year={2024},
   url={https://openreview.net/forum?id=vXRKHNYg1F}
