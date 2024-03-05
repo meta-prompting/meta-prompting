@@ -163,70 +163,6 @@ Final Answer: the answer is $\boxed{...}$.
 </syntax>
 ```
 
-```xml
-<system>
-<description>
-As one of the most distinguished mathematicians, logicians, programmers, and AI
-scientists, you possess an unparalleled mastery over various mathematical domains.
-You approach problems methodically, with detailed articulation and Python code execution.
-</description>
-<instructions>
-<objective>
-Automatically configure solutions to complex mathematical problems with Python code execution.
-</objective>
-<key_priorities>
-<priority>Generate useful hints for solving the problem.</priority>
-<priority>Craft intermediate questions that
-break down the problem, solving them with code.</priority>
-<priority>Automatically configure solutions where applicable.</priority>
-</key_priorities>
-<code_execution_guidelines>
-<guideline>Import necessary libraries in all code blocks,
-such as ’from sympy import *’.</guideline>
-<guideline>Maintain variable inheritance across code blocks,
-excluding blocks with errors.</guideline>
-<guideline>Execute all code blocks immediately after writing to validate them.
-</guideline>
-</code_execution_guidelines>
-<mathematical_formatting>
-<format>Present the final answer in LaTeX format, enclosed within ’\boxed{}’
-without units.</format>
-<format>Use ’pi’ and ’Rational’ from Sympy for pi and fractions,
-simplifying them without converting to decimals.</format>
-</mathematical_formatting>
-</instructions>
-</system>
-<syntax>
-<problem_structure>
-<problem_definition>
-<!-- Insert Problem Here -->
-</problem_definition>
-<solution_approach>
-<!-- Insert Step-by-Step Solution Approach Here -->
-</solution_approach>
-<preliminary_contents>
-<!-- Insert Preliminary Contents Here -->
-</preliminary_contents>
-<hints>
-<!-- Insert Useful Hints Here -->
-</hints>
-<intermediate_steps>
-<!-- Insert Intermediate Steps (Questions, Answers, Code) Here -->
-</intermediate_steps>
-<final_solution>
-<solution_sketch>
-<!-- Insert Solution Sketch Here -->
-</solution_sketch>
-<code_for_solution>
-<!-- Insert Code for Final Solution Here -->
-</code_for_solution>
-<final_answer>
-<!-- Insert Final Answer Here -->
-</final_answer>
-</final_solution>
-</problem_structure>
-</syntax>
-```
 
 ### Application and Use Cases:
 
@@ -248,54 +184,6 @@ In the realm of advanced machine learning and AI systems, the task of automatica
 
 See `./prompts/mp-pt-reasoning-v0.1.tex` for a minimalist latex-style implementation based on OpenAI Assistant API.
 
-```tex
-\begin{tcolorbox}[width=0.95\textwidth,colback=gray!2!white,colframe=gray!50!blue]
-    \begin{minipage}{\textwidth}
-        \textbf{Task:} \textit{Prompt Revision to Enhance Reasoning Capabilities.}
-        \begin{enumerate}
-            \item \textbf{Input Prompt:} [input prompt]
-            \item \textbf{Objective:} Revise the above input prompt to enhance critical thinking and reasoning capabilities.
-            \item \textbf{Key Elements for Revision:}
-                \begin{itemize}
-                    \item Integrate complex problem-solving elements.
-                    \item Embed multi-step reasoning processes.
-                    \item Incorporate scenarios challenging conventional thinking.
-                \end{itemize}
-            \item \textbf{Expected Outcome:}
-                \begin{itemize}
-                    \item The revised prompt ([revised prompt]) should stimulate deeper analytical thought.
-                    \item It should facilitate a comprehensive understanding of the subject matter.
-                    \item Ensure the revised prompt fosters the exploration of diverse perspectives.
-                    \item The prompt should encourage synthesis of information from various domains.
-                \end{itemize}
-        \end{enumerate}
-\end{minipage}
-\end{tcolorbox}
-```
-
-### Prompt Simplification
-
-```tex
-\begin{tcolorbox}[width=0.95\textwidth,colback=gray!2!white,colframe=gray!50!blue]
-    \begin{minipage}{\textwidth}
-        \textbf{Task:} \textit{Prompt Simplification}
-        \begin{itemize}
-            \item \textbf{Original Prompt:} [input prompt]
-            \item \textbf{Goal:} Transform the original prompt into a more concise version while preserving its core essence and objective.
-            \item \textbf{Instructions for Transformation:}
-                \begin{enumerate}
-                    \item Maintain the primary purpose and objectives of the original prompt.
-                    \item Focus on distilling the prompt to include only key instructions and essential information.
-                    \item Eliminate any extraneous or non-essential details.
-                    \item Use clear, direct language to ensure ease of understanding.
-                    \item Where beneficial, employ bullet points or numbered steps to structure the prompt and enhance clarity.
-                \end{enumerate}
-            \item \textbf{Outcome:} The [revised prompt] should be succinct yet sufficiently detailed to guide effective task completion. It should be structured for ease of comprehension and application, ensuring a focused and streamlined approach to the task at hand.
-        \end{itemize}
-    \end{minipage}
-\end{tcolorbox}
-```
-
 ## Recursive Meta Prompting
 
 ### Meta Prompting for In-Context Prompt Design
@@ -304,75 +192,14 @@ See `./prompts/mp-icpd-v0.1.md` for a minimalist implementation based on OpenAI 
 
 - please visit [https://chat.openai.com/g/g-9d0iBPnzR-mp-icpd](https://chat.openai.com/g/g-9d0iBPnzR-mp-icpd) for an online demo.
 
-```tex
-\begin{tcolorbox}[width=\textwidth,colback=gray!2!white,colframe=gray!50!blue]
-    \textbf{Task:} \textit{Meta Prompting for In-Context Prompt Design}
-    \begin{enumerate}
-        \item \textbf{Document Analysis:} 
-            \begin{itemize}
-                \item Input: [Complex document, e.g., research paper, or even including this prompt itself]
-                \item Action: Analyze and comprehend key concepts, methodologies, challenges, and objectives.
-            \end{itemize}
-
-        \item \textbf{Task Interpretation:} 
-            \begin{itemize}
-                \item Action: Synthesize information to define the core problem or task.
-                \item Considerations: Identify constraints, goals, or requirements.
-            \end{itemize}
-
-        \item \textbf{Prompt Design:} 
-            \begin{itemize}
-                \item Objective: Develop a structured prompt for problem-solving.
-                \item Elements: Instructions, step-by-step approach, background information.
-            \end{itemize}
-
-        \item \textbf{Optional - Direct Solution Proposal:}
-            \begin{itemize}
-                \item Objective: Propose initial steps or a complete solution strategy.
-                \item Considerations: Feasibility and practicality within the context.
-            \end{itemize}
-
-        \item \textbf{Output Prompt: [to be generated using the same latex format as this prompt]}
-    \end{enumerate}
-    \textit{Note: The output is a coherent, actionable prompt or solution strategy, tailored to the specifics of the input document.}
-\end{tcolorbox}
-```
-
 ### Recursive Meta Prompting for In-Context Prompt Design
 
 ```
-<|User|> [Input Document]: <your_system_prompt_itself> \textbf{Output Prompt: [to be generated using the same latex format as this prompt]}
+<|User|> [Input Document]: <your_system_prompt_itself>
+         \textbf{Output Prompt: [to be generated using the same latex format as this prompt]}
 ```
 
-Here is the generated `./prompts/mp-icpd-v0.2.md`:
-
-```tex
-\begin{tcolorbox}[width=\textwidth,colback=gray!2!white,colframe=gray!50!blue]
-    \textbf{Task:} \textit{Meta Prompting for In-Context Prompt Design}
-
-    \textbf{Document Analysis:}
-    \begin{itemize}
-        \item Input: \textit{Analyze a complex document (such as this task description) to understand key concepts, methodologies, challenges, and objectives.}
-    \end{itemize}
-
-    \textbf{Task Interpretation:}
-    \begin{itemize}
-        \item Action: \textit{Synthesize the information to define the core problem or task, considering any constraints, goals, or requirements.}
-    \end{itemize}
-
-    \textbf{Prompt Design:}
-    \begin{itemize}
-        \item Objective: \textit{Develop a structured prompt for problem-solving that includes clear instructions, a step-by-step approach, and relevant background information.}
-    \end{itemize}
-
-    \textbf{Optional - Direct Solution Proposal:}
-    \begin{itemize}
-        \item Objective: \textit{Propose initial steps or a complete solution strategy, ensuring feasibility and practicality within the context.}
-    \end{itemize}
-
-    \textbf{Output Prompt:} \textit{Generate a coherent, actionable prompt or solution strategy, tailored to the specifics of the input document.}
-\end{tcolorbox}
-```
+The generated is shown in `./prompts/mp-icpd-v0.2.md`. 
 
 ## References
 
