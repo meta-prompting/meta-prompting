@@ -50,20 +50,24 @@ Our evaluation demonstrates superior performance of the zero-shot meta-prompted 
 | PaLM-2                           | -          | No         | CoT          | 34.3     |
 | GPT-4 (2023-0314)                | -          | No         | CoT          | **42.5** |
 | **Open-source Models**           |            |            |              |          |
+| Qwen-14B (base)                  | -          | No         | CoT          | 24.8     |
+| Qwen-14B (base)                  | -          | No         | **MetaPrompt**| **28.9**|
 | Llama-2-70B (base)               | -          | No         | CoT          | 13.5     |
 | Qwen-72B (base)                  | -          | No         | CoT          | 35.2     |
 | Qwen-72B-MetaMathQA              | MetaMathQA | No         | CoT          | 41.7     |
-| **Qwen-72B (base) MetaPrompt**   | -          | No         | **MetaPrompt**| **46.3**|
+| Qwen-72B (base)                  | -          | No         | **MetaPrompt**| **46.3**|
 
 #### GSM8K Dataset Performance
 
 | Model                          | FT-Dataset | Tool Usage | Eval Method  | GSM8K (%) |
 |--------------------------------|------------|------------|--------------|-----------|
 | Llama-2-70B (base)             | -          | No         | CoT          | 13.5      |
+| Qwen-14B (base)                | -          | No         | CoT          | 61.3      |
+| Qwen-14B (base)                | -          | No         | **MetaPrompt**| **64.8** |
 | WizardMath-70B                 | WizardMath | No         | CoT          | 81.6      |
-| MetaMath-70B                   | MetaMathQA | No         | CoT          | **82.3**  |
+| MetaMath-70B                   | MetaMathQA | No         | CoT          | 82.3      |
 | Qwen-72B (base)                | -          | No         | CoT          | 78.9      |
-| **Qwen-72B (base) MetaPrompt** | -          | No         | **MetaPrompt**| **83.5** |
+| Qwen-72B (base)                | -          | No         | **MetaPrompt**| **83.5** |
 
 ### Solving Game of 24 Tasks
 
