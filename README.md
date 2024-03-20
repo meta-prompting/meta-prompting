@@ -23,21 +23,57 @@ Official implementation of paper "Meta Prompting for AI Systems" (https://arxiv.
 
 5. **Guidance for Detailed Exploration**: While it does not delve into specifics, Meta Prompting provides a clear pathway for detailed exploration, guiding users on how to approach and structure their deep dive into the topic.
 
-### MATH and GSM8K problems 
-
-See `./Math` for detailed implementations. 
-
-### Game of 24
-
-<center>
-
-**MP-CR-Agent-XML v0.2** Success Rate: **100%**. 
-
-Experiment log: ([https://chat.openai.com/share/01f690c7-5410-4121-992c-08ec8e0bde8c](https://chat.openai.com/share/01f690c7-5410-4121-992c-08ec8e0bde8c))
-
-</center>
-
 In essence, the general concept of Meta Prompting is about providing a skeleton or a blueprint that outlines the structure of a response or solution, focusing more on the "how" rather than the "what" of information presentation. This method is especially useful in contexts where understanding the underlying structure is key to mastering the content or solving the problem.
+
+## Solving Math Problems
+
+### Experiment Settings
+
+We evaluated our models on the MATH and GSM8K datasets:
+
+- MATH: A competition-level math word problems benchmark with 5000 test problems.
+- GSM8K: The most widely used math word problem dataset with 1319 test grade school math problems.
+
+Models were evaluated using the vLLM framework for Qwen-14B and Qwen-72B base language models with Meta Prompt. The evaluation was performed with a rule-based evaluator and SymPy to align model responses with ground-truth solutions.
+
+### Experimental Results
+
+Our evaluation demonstrates superior performance of the zero-shot meta-prompted Qwen-72B base language model on both MATH and GSM8K datasets, showcasing Meta Prompting's efficacy in mathematical problem-solving.
+
+#### MATH Dataset Performance
+
+| Model                            | FT-Dataset | Tool Usage | Eval Method  | MATH (%) |
+|----------------------------------|------------|------------|--------------|----------|
+| **Proprietary Models**           |            |            |              |          |
+| Claude-2                         | -          | No         | CoT          | 32.5     |
+| Minerva-540B                     | Arxiv+Web  | No         | CoT          | 33.6     |
+| PaLM-2                           | -          | No         | CoT          | 34.3     |
+| GPT-4 (2023-0314)                | -          | No         | CoT          | **42.5** |
+| **Open-source Models**           |            |            |              |          |
+| Llama-2-70B (base)               | -          | No         | CoT          | 13.5     |
+| Qwen-72B (base)                  | -          | No         | CoT          | 35.2     |
+| Qwen-72B-MetaMathQA              | MetaMathQA | No         | CoT          | 41.7     |
+| **Qwen-72B (base) MetaPrompt**   | -          | No         | **MetaPrompt**| **46.3**|
+
+#### GSM8K Dataset Performance
+
+| Model                          | FT-Dataset | Tool Usage | Eval Method  | GSM8K (%) |
+|--------------------------------|------------|------------|--------------|-----------|
+| Llama-2-70B (base)             | -          | No         | CoT          | 13.5      |
+| WizardMath-70B                 | WizardMath | No         | CoT          | 81.6      |
+| MetaMath-70B                   | MetaMathQA | No         | CoT          | **82.3**  |
+| Qwen-72B (base)                | -          | No         | CoT          | 78.9      |
+| **Qwen-72B (base) MetaPrompt** | -          | No         | **MetaPrompt**| **83.5** |
+
+### Solving Game of 24 Tasks
+
+| Method       | LLM Sessions (per sample) | Generate/Prompt tokens | Cost     | Success Rate |
+|--------------|---------------------------|------------------------|----------|--------------|
+| IO (best of 100) | 100                     | 1.8k / 1.0k            | $0.13    | 33%          |
+| CoT (best of 100) | 100                    | 6.7k / 2.2k            | $0.47    | 49%          |
+| ToT~\citep{yao2023tree} | 61.72            | 5.5k / 1.4k            | $0.74    | 74%          |
+| **MP**       | **$\frac{1}{N}$**         | **$\approx \frac{1}{N}$ (8k / 1k)** | **$\approx$ $0.0003** | **100%** |
+
 
 ## Meta Prompting for Complex Reasoning 
 
