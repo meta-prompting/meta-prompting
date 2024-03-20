@@ -41,7 +41,7 @@ In essence, the general concept of Meta Prompting is about providing a skeleton 
 
 ## Meta Prompting for Complex Reasoning 
 
-**"Meta Prompting for Complex Reasoning"** (see `/.prompts/` ) is a specialized adaptation of the general Meta Prompting approach, specifically tailored for tackling intricate and multifaceted problems, particularly in fields requiring in-depth analytical and logical reasoning. This version emphasizes not just the structure and syntax of the problem-solving process, but also delves deeply into the content, ensuring a thorough and comprehensive approach to each problem.
+**"Meta Prompting for Complex Reasoning"** (see `/.prompts/cr-agent*` ) is a specialized adaptation of the general Meta Prompting approach, specifically tailored for tackling intricate and multifaceted problems, particularly in fields requiring in-depth analytical and logical reasoning. This version emphasizes not just the structure and syntax of the problem-solving process, but also delves deeply into the content, ensuring a thorough and comprehensive approach to each problem.
 
 ### Key Elements of Meta Prompting for Complex Reasoning:
 
