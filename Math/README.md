@@ -1,13 +1,4 @@
-
-<h1 align="center">
-<br>
-(CR Agent) Cumulative Reasoning Agent with Environment Feedback
-<p> </p>
-<br>
-Meta Prompting for Solving Math and GSM8K problems
-<p> </p>
-</h1>
-
+# Meta Prompting for Solving MATH and GSM8K problems
 
 ## Setup
 
@@ -26,5 +17,5 @@ pip install -r requirements.txt
 We provide a script for inference, simply config the `MODEL_NAME_OR_PATH` and `DATA` in [./scripts/infer.sh](./scripts/infer.sh) and run the following command:
 
 ```sh
-bash scritps/infer.sh
+bash ./scripts/infer.sh
 ```
