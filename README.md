@@ -48,7 +48,7 @@ Our evaluation demonstrates superior performance of the zero-shot meta-prompted 
 | Claude-2                         | -          | No         | CoT          | 32.5     |
 | Minerva-540B                     | Arxiv+Web  | No         | CoT          | 33.6     |
 | PaLM-2                           | -          | No         | CoT          | 34.3     |
-| GPT-4 (2023-0314)                | -          | No         | CoT          | **42.5** |
+| GPT-4 (2023-0314)                | -          | No         | CoT          | 42.5     |
 | **Open-source Models**           |            |            |              |          |
 | Qwen-14B (base)                  | -          | No         | CoT          | 24.8     |
 | Qwen-14B (base)                  | -          | No         | **MetaPrompt**| **28.9**|
