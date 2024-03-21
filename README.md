@@ -75,7 +75,7 @@ Our evaluation demonstrates superior performance of the zero-shot meta-prompted 
 |--------------|---------------------------|------------------------|----------|--------------|
 | IO (best of 100) | 100                     | 1.8k / 1.0k            | $0.13    | 33%          |
 | CoT (best of 100) | 100                    | 6.7k / 2.2k            | $0.47    | 49%          |
-| ToT~\citep{yao2023tree} | 61.72            | 5.5k / 1.4k            | $0.74    | 74%          |
+| ToT (breadth=5) | 61.72            | 5.5k / 1.4k            | $0.74    | 74%          |
 | **MP**       | **$\frac{1}{N}$**         | **$\approx \frac{1}{N}$ (8k / 1k)** | **$\approx$ $0.0003** | **100%** |
 
 
