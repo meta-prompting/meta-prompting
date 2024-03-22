@@ -9,39 +9,79 @@ Homepage: https://meta-prompting.github.io.
 
 Official implementation of paper "Meta Prompting for AI Systems" (https://arxiv.org/abs/2311.11482).
 
-**Meta Prompting (General Definition)**: Meta Prompting is a prompting technique inspired by type theory, emphasizing the structure and syntax of examples rather than their detailed content. It's an approach where the focus is on presenting the outline or framework of a problem or topic, offering a scaffold that can be filled with specific details as needed. This technique is particularly useful in situations where understanding the form and pattern of a problem or solution is more crucial than the specific content.
+**Meta Prompting** is an advanced prompting technique that focuses on the structural and syntactical aspects of problems, prioritizing the general format and pattern over specific content details. It aims to construct a more abstract, structured approach to interacting with large language models (LLMs), emphasizing the structure and syntax of information. This technique is particularly effective in contexts where the underlying pattern or framework of a problem is crucial for understanding or solving it.
+
+A **Meta Prompt** is an example-agnostic structured prompt designed to capture the reasoning structure of a specific category of tasks. It provides a scaffold that outlines the general approach to a problem, enabling LLMs to fill in specific details as needed. This approach allows for more efficient and targeted use of LLM capabilities by focusing on the "how" of problem-solving rather than the "what".
 
 ### Characteristics of Meta Prompting:
 
-1. **Syntax-Oriented**: The emphasis is on the form and structure of the prompt. The syntax acts as a template or a guide that outlines how a response or solution should be structured.
+- **Syntax-Oriented**: Meta Prompting prioritizes the form and structure over the content, using syntax as a guiding template for the expected response or solution. 
 
-2. **Abstract-Example-Based**: Abstracted examples are employed to demonstrate the structure, though they are not elaborated in the content. These examples act as frameworks for inserting specific details.
+- **Abstract-Example-Based**: It employs abstracted examples as frameworks, illustrating the structure of problems and solutions without focusing on specific content. 
 
-3. **Type Theory Inspiration**: Drawing from type theory, this approach focuses on the types or categories of components in a prompt, such as problem statements, solution steps, or conclusions, and how they are logically organized.
+- **Type Theory Inspiration**: Drawing from type theory, Meta Prompting emphasizes the categorization of components in a prompt, such as problem statements, solution steps, or conclusions. It focuses on their logical arrangement and interrelationships, ensuring a coherent and structured approach to problem-solving. 
 
-4. **Adaptability**: The approach is adaptable to various domains, from mathematical problem-solving to creative writing, where the structure of the response is a key element.
+- **Adaptability**: Meta Prompting is versatile, applicable across various domains, and capable of providing structured responses to a wide range of problems. 
 
-5. **Guidance for Detailed Exploration**: While it does not delve into specifics, Meta Prompting provides a clear pathway for detailed exploration, guiding users on how to approach and structure their deep dive into the topic.
+- **Guidance for Detailed Exploration**: It provides a clear roadmap for problem-solving, focusing on structural patterns to aid in navigating complex topics. 
 
-### MATH and GSM8K problems 
+## Solving Math Problems
 
-See `./Math` for detailed implementations. 
+### Experiment Settings
 
-### Game of 24
+We evaluated our models on the MATH and GSM8K datasets:
 
-<center>
+- MATH: A competition-level math word problems benchmark with 5000 test problems.
+- GSM8K: The most widely used math word problem dataset with 1319 test grade school math problems.
 
-**MP-CR-Agent-XML v0.2** Success Rate: **100%**. 
+Models were evaluated using the vLLM framework for Qwen-14B and Qwen-72B base language models with Meta Prompt. The evaluation was performed with a rule-based evaluator and SymPy to align model responses with ground-truth solutions.
 
-Experiment log: ([https://chat.openai.com/share/01f690c7-5410-4121-992c-08ec8e0bde8c](https://chat.openai.com/share/01f690c7-5410-4121-992c-08ec8e0bde8c))
+### Experimental Results
 
-</center>
+Our evaluation demonstrates superior performance of the zero-shot meta-prompted Qwen-72B base language model on both MATH and GSM8K datasets, showcasing Meta Prompting's efficacy in mathematical problem-solving.
 
-In essence, the general concept of Meta Prompting is about providing a skeleton or a blueprint that outlines the structure of a response or solution, focusing more on the "how" rather than the "what" of information presentation. This method is especially useful in contexts where understanding the underlying structure is key to mastering the content or solving the problem.
+#### MATH Dataset Performance
+
+| Model                            | FT-Dataset | Tool Usage | Eval Method  | MATH (%) |
+|----------------------------------|------------|------------|--------------|----------|
+| **Proprietary Models**           |            |            |              |          |
+| Claude-2                         | -          | No         | CoT          | 32.5     |
+| Minerva-540B                     | Arxiv+Web  | No         | CoT          | 33.6     |
+| PaLM-2                           | -          | No         | CoT          | 34.3     |
+| GPT-4 (2023-0314)                | -          | No         | CoT          | 42.5     |
+| **Open-source Models**           |            |            |              |          |
+| Qwen-14B (base)                  | -          | No         | CoT          | 24.8     |
+| Qwen-14B (base)                  | -          | No         | **MetaPrompt**| **28.9**|
+| Llama-2-70B (base)               | -          | No         | CoT          | 13.5     |
+| Qwen-72B (base)                  | -          | No         | CoT          | 35.2     |
+| Qwen-72B-MetaMathQA              | MetaMathQA | No         | CoT          | 41.7     |
+| Qwen-72B (base)                  | -          | No         | **MetaPrompt**| **46.3**|
+
+#### GSM8K Dataset Performance
+
+| Model                          | FT-Dataset | Tool Usage | Eval Method  | GSM8K (%) |
+|--------------------------------|------------|------------|--------------|-----------|
+| Llama-2-70B (base)             | -          | No         | CoT          | 13.5      |
+| Qwen-14B (base)                | -          | No         | CoT          | 61.3      |
+| Qwen-14B (base)                | -          | No         | **MetaPrompt**| **64.8** |
+| WizardMath-70B                 | WizardMath | No         | CoT          | 81.6      |
+| MetaMath-70B                   | MetaMathQA | No         | CoT          | 82.3      |
+| Qwen-72B (base)                | -          | No         | CoT          | 78.9      |
+| Qwen-72B (base)                | -          | No         | **MetaPrompt**| **83.5** |
+
+### Solving Game of 24 Tasks
+
+| Method       | LLM Sessions (per sample) | Generate/Prompt tokens | Cost     | Success Rate |
+|--------------|---------------------------|------------------------|----------|--------------|
+| IO (best of 100) | 100                     | 1.8k / 1.0k            | $0.13    | 33%          |
+| CoT (best of 100) | 100                    | 6.7k / 2.2k            | $0.47    | 49%          |
+| ToT (breadth=5) | 61.72            | 5.5k / 1.4k            | $0.74    | 74%          |
+| **MP**       | **$\frac{1}{N}$**         | **$\approx \frac{1}{N}$ (8k / 1k)** | **$\approx$ $0.0003** | **100%** |
+
 
 ## Meta Prompting for Complex Reasoning 
 
-**"Meta Prompting for Complex Reasoning"** (see `/.prompts/` ) is a specialized adaptation of the general Meta Prompting approach, specifically tailored for tackling intricate and multifaceted problems, particularly in fields requiring in-depth analytical and logical reasoning. This version emphasizes not just the structure and syntax of the problem-solving process, but also delves deeply into the content, ensuring a thorough and comprehensive approach to each problem.
+**"Meta Prompting for Complex Reasoning"** (see `/.prompts/cr-agent*` ) is a specialized adaptation of the general Meta Prompting approach, specifically tailored for tackling intricate and multifaceted problems, particularly in fields requiring in-depth analytical and logical reasoning. This version emphasizes not just the structure and syntax of the problem-solving process, but also delves deeply into the content, ensuring a thorough and comprehensive approach to each problem.
 
 ### Key Elements of Meta Prompting for Complex Reasoning:
 
