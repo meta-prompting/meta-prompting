@@ -3,11 +3,12 @@ set -ex
 # MODEL_NAME_OR_PATH="Qwen/Qwen-14B"
 MODEL_NAME_OR_PATH="Qwen/Qwen-72B"
 
-DATA="gsm8k"
-# DATA="math"
+# DATA="gsm8k"
+DATA="math"
 
 SPLIT="test"
-PROMPT_TYPE="mp-json"
+# PROMPT_TYPE="mp-json"
+PROMPT_TYPE="mp"
 NUM_TEST_SAMPLE=-1
 
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 TOKENIZERS_PARALLELISM=false \
