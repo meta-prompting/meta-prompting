@@ -7,7 +7,7 @@ Homepage: https://meta-prompting.github.io.
 
 ## Introduction
 
-Official implementation of paper "Meta Prompting for AGI Systems" (https://arxiv.org/abs/2311.11482).
+Official implementation of paper "Meta Prompting for AI Systems" (https://arxiv.org/abs/2311.11482).
 
 **Meta Prompting** is an advanced prompting technique that focuses on the structural and syntactical aspects of problems, prioritizing the general format and pattern over specific content details. It aims to construct a more abstract, structured approach to interacting with large language models (LLMs), emphasizing the structure and syntax of information. This technique is particularly effective in contexts where the underlying pattern or framework of a problem is crucial for understanding or solving it.
 
