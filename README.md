@@ -3,8 +3,6 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2311.11482-<COLOR>.svg)](https://arxiv.org/abs/2311.11482) 
 ![Python 3.9](https://img.shields.io/badge/python-3.9-green.svg)
 
-Homepage: https://meta-prompting.github.io.
-
 ## Introduction
 
 Official implementation of paper "Meta Prompting for AI Systems" (https://arxiv.org/abs/2311.11482).
