@@ -157,7 +157,7 @@ Computing Systems, pp. 1–7, 2021.
 to learn better prompts. arXiv preprint arXiv:2209.11486, 2022.
 
 ## Citations
-Please cite the paper and star this repo if you use Meta Prompting (MP) and find it interesting/useful, thanks! Feel free to contact zhangyif21@mails.tsinghua.edu.cn or open an issue if you have any questions.
+Please cite the paper and star this repo if you use Meta Prompting (MP) and find it interesting/useful, thanks! Feel free to open an issue if you have any questions.
 
 ```bibtex
 @article{zhang2023meta,
