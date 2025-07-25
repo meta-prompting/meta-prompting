@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)
 
-This is the official repository for the paper **"Meta Prompting for AI Systems"**.
+This is the official repository for the paper **"Meta Prompting for AI Systems"** (https://arxiv.org/abs/2311.11482).
 
 > **Abstract:** We introduce Meta Prompting (MP), a framework that elevates the reasoning capabilities of large language models (LLMs) by focusing on the formal structure of a task rather than content-specific examples. We establish a theoretical foundation for this paradigm, formalizing MP as a functor that maps a category of tasks to a category of structured prompts, thereby guaranteeing that compositional problem-solving strategies can be systematically decomposed into modular prompt structures. We extend this concept to Recursive Meta Prompting (RMP), an automated process where an LLM can generate and refine its own prompts. We model this self-improvement loop formally as a monad, providing a principled framework for automated prompt engineering. Our claims are validated through extensive experiments demonstrating that a Qwen-72B base model, guided by a single, example-agnostic meta-prompt, achieves state-of-the-art results on MATH, GSM8K, and Game of 24. These results are achieved with substantial token efficiency gains over traditional few-shot methods.
 
