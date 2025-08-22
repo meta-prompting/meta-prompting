@@ -96,7 +96,7 @@ We model the process of an LLM refining its own prompts (RMP) as a monad. This f
 
 -----
 
-## 🚀 State-of-the-Art Results
+## Experimental Results
 
 Our experiments show that Meta Prompting unlocks powerful reasoning in base language models without any fine-tuning, using only a single, example-agnostic prompt.
 
