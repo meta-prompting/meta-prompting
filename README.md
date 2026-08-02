@@ -212,7 +212,7 @@ If you find our work useful for your research, please consider citing our paper 
 ```bibtex
 @article{zhang2023meta,
   title={Meta Prompting for AI Systems},
-  author={Zhang, Yifan and Yuan, Yang and Yao, Andrew Chi-Chih},
+  author={Zhang, Yifan and Yao, Andrew Chi-Chih},
   journal={arXiv preprint arXiv:2311.11482},
   year={2023},
   note={Published in ICLR 2024 BGPT Workshop}
